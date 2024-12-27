@@ -1,0 +1,78 @@
+
+### Home Route
+GET http://localhost:3000/
+
+
+### TODOs Route
+GET http://localhost:3000/todos/
+
+
+### TODOs Route
+### Get Todos by Status: Scenario 1
+GET http://localhost:3000/todos/?status=TO%20DO
+Content-Type: application/json
+
+
+### Get Todos by Priority: Scenario 2
+GET http://localhost:3000/todos/?priority=HIGH
+Content-Type: application/json
+
+
+### Get Todos by Priority and Status: Scenario 3
+GET http://localhost:3000/todos/?priority=HIGH&status=IN%20PROGRESS
+Content-Type: application/json
+
+
+### Get Todos by Search Query: Scenario 4
+GET http://localhost:3000/todos/?search_q=Play
+Content-Type: application/json
+
+
+### GET TODO
+GET http://localhost:3000/todos/2/
+
+
+### POST TODO
+POST http://localhost:3000/todos/
+Content-Type: application/json
+
+{
+  "id": 10,
+  "todo": "Finalize event theme",
+  "priority": "LOW",
+  "status": "TO DO"
+}
+
+
+### Update Todo Status: Scenario 1
+PUT http://localhost:3000/todos/1/
+Content-Type: application/json
+
+
+{
+  "status": "DONE"
+}
+
+
+### Update Todo Priority: Scenario 2
+PUT http://localhost:3000/todos/1/
+Content-Type: application/json
+
+
+{
+  "priority": "HIGH"
+}
+
+
+### Update Todo: Scenario 3
+PUT http://localhost:3000/todos/1/
+Content-Type: application/json
+
+
+{
+  "todo": "Some task"
+}
+
+
+### DELETE TODO API
+DELETE http://localhost:3000/todos/3/
